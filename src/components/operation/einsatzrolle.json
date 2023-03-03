@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_einsatz_einsatzrolles",
+  "info": {
+    "displayName": "OperationRole",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Chlaus",
+        "Schmutzli",
+        "Eseli",
+        "Schminkerin",
+        "Stao",
+        "Helfer"
+      ]
+    }
+  }
+}

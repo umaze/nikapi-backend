@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "availabilities",
+  "info": {
+    "singularName": "availability",
+    "pluralName": "availabilities",
+    "displayName": "Availability"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bemerkung": {
+      "type": "string"
+    },
+    "rollen": {
+      "type": "component",
+      "repeatable": true,
+      "component": "operation.einsatzrolle",
+      "required": true
+    },
+    "demand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::demand.demand",
+      "inversedBy": "availabilities"
+    },
+    "benutzer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "availabilities"
+    }
+  }
+}

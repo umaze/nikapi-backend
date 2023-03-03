@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_einsatz_einsatztyps",
+  "info": {
+    "displayName": "OperationType",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "typ": {
+      "type": "enumeration",
+      "enum": [
+        "Weihnachtsmarkt",
+        "Waldhütte",
+        "Abend",
+        "Kath. Kirche",
+        "Einzug Brüttisellen",
+        "Schulen Vormittag",
+        "Schulen Nachmittag",
+        "Lokal einrichten",
+        "Aufbau Markt",
+        "Abbau Markt",
+        "Lokal aufräumen"
+      ]
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demands",
+  "info": {
+    "singularName": "demand",
+    "pluralName": "demands",
+    "displayName": "Demand",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "datum": {
+      "type": "date"
+    },
+    "gruppe": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::demand-group.demand-group",
+      "inversedBy": "demands"
+    },
+    "zeitVon": {
+      "type": "time"
+    },
+    "zeitBis": {
+      "type": "time"
+    },
+    "einsatztyp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "operation.einsatztyp"
+    },
+    "beschreibung": {
+      "type": "text"
+    },
+    "availabilities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::availability.availability",
+      "mappedBy": "demand"
+    }
+  }
+}

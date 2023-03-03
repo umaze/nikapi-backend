@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "demand_groups",
+  "info": {
+    "singularName": "demand-group",
+    "pluralName": "demand-groups",
+    "displayName": "DemandGroup",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "rollen": {
+      "type": "component",
+      "repeatable": true,
+      "component": "operation.einsatzrolle",
+      "required": true
+    },
+    "demands": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::demand.demand",
+      "mappedBy": "gruppe"
+    }
+  }
+}
