@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "bezeichnung": {
+      "type": "string"
+    },
+    "auftraggeber": {
+      "type": "string",
+      "required": true
+    },
+    "adresse": {
+      "type": "string"
+    },
+    "zeitpunkt": {
+      "type": "datetime",
+      "required": true
+    },
+    "kontakt": {
+      "type": "string"
+    },
+    "bemerkung": {
+      "type": "string"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "offen",
+        "zugewiesen",
+        "erledigt",
+        "inaktiv"
+      ],
+      "default": "offen",
+      "required": true
+    },
+    "activity": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::activity.activity",
+      "inversedBy": "orders"
+    },
+    "einsatztyp": {
+      "type": "component",
+      "repeatable": false,
+      "component": "operation.einsatztyp"
+    }
+  }
+}
