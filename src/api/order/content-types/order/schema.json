@@ -22,8 +22,8 @@
     "adresse": {
       "type": "string"
     },
-    "zeitpunkt": {
-      "type": "datetime",
+    "datum": {
+      "type": "date",
       "required": true
     },
     "kontakt": {
