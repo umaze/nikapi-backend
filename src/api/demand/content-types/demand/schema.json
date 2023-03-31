@@ -40,6 +40,12 @@
       "relation": "oneToMany",
       "target": "api::availability.availability",
       "mappedBy": "demand"
+    },
+    "activities": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::activity.activity",
+      "mappedBy": "demand"
     }
   }
 }

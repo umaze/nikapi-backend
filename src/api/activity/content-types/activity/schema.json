@@ -40,6 +40,12 @@
       "type": "component",
       "repeatable": true,
       "component": "assignment.assignment-role"
+    },
+    "demand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::demand.demand",
+      "inversedBy": "activities"
     }
   }
 }
