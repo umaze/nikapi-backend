@@ -53,6 +53,11 @@
       "type": "component",
       "repeatable": false,
       "component": "operation.einsatztyp"
+    },
+    "anzahlKinder": {
+      "type": "integer",
+      "required": true,
+      "min": 0
     }
   }
 }
